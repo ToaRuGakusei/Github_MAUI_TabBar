@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TGReaderGX.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TGReaderGX"
+    FlyoutBehavior="Disabled"
+    >
+    <Shell.FlyoutHeader>
+        <Image Source="flyoutcover"></Image>
+    </Shell.FlyoutHeader>
+
+    <TabBar x:Name="tab">
+        <ShellContent  Title="ローカルファイル" Icon="folder.png"
+                       ContentTemplate="{DataTemplate local:MainPage}"
+                       >
+
+        </ShellContent>
+        <ShellContent Title="samba" Icon="smb.png" 
+                      ContentTemplate="{DataTemplate local:SetSMB}"
+                      >
+
+        </ShellContent>
+        <ShellContent x:Name="hisotry" Title="履歴" Icon="history.png"
+                      ContentTemplate="{DataTemplate local:History}"
+                      >
+
+        </ShellContent>
+    </TabBar>
+</Shell>
